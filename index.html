@@ -1,0 +1,1091 @@
+<html>
+<head >
+  <title>Memory Bank Inc.</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="icon" sizes="16x16 32x32 64x64" href="C:\Users\Dionne\Desktop\College_Work\2ndYear\MaxInteractive\Project_3\faviconit\favicon.ico">
+
+  <!--<link rel="stylesheet" href="style.css"/>-->
+  <style>
+
+  body {
+    overflow-x:hidden;
+  }
+
+.Gathering {font-family: 'Josefin Sans', sans-serif;font-size: 36px; position: relative; top: -22.5vh; margin-top: 25px;line-height: 38px;}
+
+.menu {color: #ffffff; background-color: rgba(255, 255, 255, .9); color: #333; font-family: 'Josefin Sans', sans-serif;
+font-size: 18px; position: fixed; width: 100%; min-height: 48px; z-index: 999999;margin: -5px; padding-left: 10px;
+margin-top: -8px;border-bottom: 1px solid #d0d4d9;box-shadow: 0px 1px 1px #d0d4d9;display: flex;flex-direction: row;margin-left: -8px;}
+
+.mainsection {display: flex;flex-wrap: wrap;min-width: 0; flex: 1;box-sizing: border-box;justify-content: flex-end;padding-right: 6vw;}
+.section {display: flex;margin: 0;padding: 0;list-style: none;align-self: stretch;box-sizing: border-box;}
+.small {display: flex;flex-flow: column;align-self: stretch;align-content: center;margin: 0;text-align: center;box-sizing: border-box;
+  font-size: 16px; line-height: 3.65;font-weight: 400;max-width: 151px;padding: 0 15px;}
+.link {font-family: 'Josefin Sans', sans-serif;background: transparent;color: #1C9D40;text-decoration: none;cursor: pointer;outline: none;}
+.link2 {font-family: 'Josefin Sans', sans-serif;background: transparent;color: #ffffff;text-decoration: none;cursor: pointer;outline: none;}
+
+
+.menutitle {padding-left: 10vw; font-size: 24px; margin-top: 15px; margin-bottom: 12px;}
+
+.Green {background-color: #1C9D40; color: #ffffff; margin-top: 70px; padding-bottom: 40px;margin-left: -8px;}
+
+.row {font-family: 'Josefin Sans', sans-serif;position: relative; top: 150px;margin-bottom: 100px;}
+.row2 {font-family: 'Josefin Sans', sans-serif;position: relative;text-align: center;font-size: 21px; word-wrap: break-word;
+text-size-adjust: 100%;border: 6px;width: 50%;margin-bottom: 30px; margin-top: -10px;z-index: 2;letter-spacing: .5px;line-height: 130%;column-width: auto;}
+.row3 {margin-top: 25%;}
+.row4 {font-family: 'Josefin Sans', sans-serif;position: relative;text-align: center;font-size: 21px;
+text-size-adjust: 100%;border: 6px;width: 62vw;margin-bottom: 30px; margin-top: 80px;z-index: 2;letter-spacing: .5px;line-height: 130%;width: 50%;}
+.mini{font-size: 18px;letter-spacing: .8px;}
+
+.sectionme {box-sizing: border-box;padding: 0 8px;position: relative;display: block;margin: 0 -8px;}
+
+.headline {font-family: 'Josefin Sans', sans-serif;font-size: 52px; margin-top: -10px; letter-spacing: 5px;}
+.headline2 {font-family: 'Josefin Sans', sans-serif;font-size: 30px; margin-top: -10px; letter-spacing: 3px;margin-bottom: 120px;}
+
+
+.hideme
+{
+    opacity:0;
+}
+
+.chip{width:150px;height:200px;padding: 90px;margin-top: 20px;margin-bottom: -20px;}
+.process{width: 475px; height: 475px;padding: 8px 0;margin-top: -14px;}
+.eat{display: inline;width: 80px; height: 100px;margin-bottom: 40px;margin-top: -140px}
+.car{display: inline;width: 140px; height: 80px;margin-bottom: 40px;margin-right: 465px;}
+.baby{display: inline;width: 100px; height: 120px;margin-bottom: 40px; margin-left: 465px;margin-top: -155px}
+
+.desc1 {font-family: 'Josefin Sans', sans-serif;font-size: 18px;font-weight: bold;margin-right: 465px}
+.desc2 {font-family: 'Josefin Sans', sans-serif;font-size: 18px;font-weight: bold;margin-top: -60px;}
+.desc3 {font-family: 'Josefin Sans', sans-serif;font-size: 18px;font-weight: bold;margin-left: 465px;margin-top: -60px}
+
+.prices{font-family: 'Josefin Sans', sans-serif;margin-top: 20px;border: 1px solid #d0d4d9; display: flex;flex-direction: column;width: 33%;flex-grow: 1; overflow: hidden;box-sizing: border-box;}
+.prices2{font-family: 'Josefin Sans', sans-serif;margin-top: 20px;border: 1px solid #d0d4d9; display: flex;flex-direction: column;width: 33%;flex-grow: 1; overflow: hidden;box-sizing: border-box;margin-left: 2%;}
+.head {background: #f5f3f4;height: 74px;padding-left: 25px;padding-top: 30px;display: block;font-size: 26px;top: 50%;text-align: left;}
+.head2 {background: #1C9D40;color: #ffffff;height: 74px;padding-left: 25px;padding-top: 30px;display: block;font-size: 26px;top: 50%;text-align: left;}
+
+
+.info1{padding: 30px 25px 10px;}
+.price1 {margin-bottom: 4px; font-size: 47px; font-weight: 200;text-align: left;}
+.priceinfo1 {height: 40px; font-size: 18px;width: 100%; display: auto; flex: none;}
+.deeperinfo1 {margin: 10px 0 15px; color: rgba(71,82,93,0.9);text-align: left;line-height: 26px;}
+
+.button1 {border: 1px solid #1C9D40; border-radius: 3px; display: block; font-size: 20px; padding: 8px 0; text-align: center;color: #1C9D40;margin-bottom: 4px;}
+.button2 {border: 1px solid #1C9D40; background-color: #1C9D40 ;color: #ffffff ;border-radius: 3px; display: block; font-size: 20px; padding: 8px 0; text-align: center; margin-bottom: 4px;}
+.button3 {display: flex; margin-left: 15px; margin-right: 6px;border: 1px solid #c1c7cd; border-radius: 4px; font-size: 16px; padding: 8px;
+  text-align: center;color: #1C9D40; margin-top: auto;margin-bottom: auto;}
+
+
+
+.options{list-style: none; margin: 0 0 25 0; padding: 0;width: 85%;display: flex;flex-direction: row;}
+
+
+.glitch {
+position: relative;
+background: white;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 42px;
+letter-spacing: 5px;
+}
+
+.glitch:hover {
+color: white;
+font-size: 42px;
+text-align: center;
+}
+
+@keyframes noise-anim {
+0% {
+  clip: rect(97px, 9999px, 76px, 0);
+}
+5% {
+  clip: rect(16px, 9999px, 98px, 0);
+}
+10% {
+  clip: rect(85px, 9999px, 87px, 0);
+}
+15% {
+  clip: rect(91px, 9999px, 48px, 0);
+}
+20% {
+  clip: rect(60px, 9999px, 50px, 0);
+}
+25% {
+  clip: rect(70px, 9999px, 47px, 0);
+}
+30% {
+  clip: rect(20px, 9999px, 11px, 0);
+}
+35% {
+  clip: rect(82px, 9999px, 15px, 0);
+}
+40% {
+  clip: rect(98px, 9999px, 66px, 0);
+}
+45% {
+  clip: rect(82px, 9999px, 14px, 0);
+}
+50% {
+  clip: rect(74px, 9999px, 37px, 0);
+}
+55% {
+  clip: rect(42px, 9999px, 79px, 0);
+}
+60% {
+  clip: rect(31px, 9999px, 84px, 0);
+}
+65% {
+  clip: rect(24px, 9999px, 77px, 0);
+}
+70% {
+  clip: rect(79px, 9999px, 48px, 0);
+}
+75% {
+  clip: rect(92px, 9999px, 7px, 0);
+}
+80% {
+  clip: rect(70px, 9999px, 96px, 0);
+}
+85% {
+  clip: rect(46px, 9999px, 26px, 0);
+}
+90% {
+  clip: rect(67px, 9999px, 17px, 0);
+}
+95% {
+  clip: rect(84px, 9999px, 10px, 0);
+}
+100% {
+  clip: rect(60px, 9999px, 54px, 0);
+}
+}
+.glitch:hover:after {
+content: attr(data-text);
+position: absolute;
+margin-left: 10vw;
+left: 2px;
+text-shadow: -1px 0 red;
+top: 0;
+color: black;
+background: white;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+0% {
+  clip: rect(31px, 9999px, 83px, 0);
+}
+5% {
+  clip: rect(35px, 9999px, 87px, 0);
+}
+10% {
+  clip: rect(80px, 9999px, 27px, 0);
+}
+15% {
+  clip: rect(61px, 9999px, 7px, 0);
+}
+20% {
+  clip: rect(73px, 9999px, 22px, 0);
+}
+25% {
+  clip: rect(3px, 9999px, 74px, 0);
+}
+30% {
+  clip: rect(26px, 9999px, 3px, 0);
+}
+35% {
+  clip: rect(54px, 9999px, 96px, 0);
+}
+40% {
+  clip: rect(95px, 9999px, 53px, 0);
+}
+45% {
+  clip: rect(12px, 9999px, 65px, 0);
+}
+50% {
+  clip: rect(99px, 9999px, 54px, 0);
+}
+55% {
+  clip: rect(31px, 9999px, 32px, 0);
+}
+60% {
+  clip: rect(17px, 9999px, 77px, 0);
+}
+65% {
+  clip: rect(65px, 9999px, 40px, 0);
+}
+70% {
+  clip: rect(86px, 9999px, 64px, 0);
+}
+75% {
+  clip: rect(53px, 9999px, 12px, 0);
+}
+80% {
+  clip: rect(85px, 9999px, 66px, 0);
+}
+85% {
+  clip: rect(76px, 9999px, 23px, 0);
+}
+90% {
+  clip: rect(22px, 9999px, 28px, 0);
+}
+95% {
+  clip: rect(86px, 9999px, 31px, 0);
+}
+100% {
+  clip: rect(34px, 9999px, 59px, 0);
+}
+}
+.glitch:hover:before {
+content: attr(data-text);
+position: absolute;
+margin-left: 10vw;
+left: -2px;
+text-shadow: 1px 0 blue;
+top: 0;
+color: black;
+background: white;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch2 {
+position: relative;
+font-family: 'Josefin Sans', sans-serif;
+background: white;
+font-size: 30px;
+margin-top: -10px;
+letter-spacing: 3px;
+margin-bottom: 120px;;
+}
+
+.glitch2:hover {
+font-size: 30px;
+color: white;
+text-align: center;
+}
+
+.glitch3 {
+position: relative;
+font-family: 'Josefin Sans', sans-serif;
+background: white;
+font-size: 38px;
+margin-top: -10px;
+letter-spacing: 3px;
+margin-bottom: 60px;;
+}
+
+.glitch3:hover {
+font-size: 38px;
+color: white;
+text-align: center;
+}
+
+.glitch4 {
+position: relative;
+font-family: 'Josefin Sans', sans-serif;
+background: #1C9D40;
+font-size: 38px;
+margin-top: -10px;
+letter-spacing: 3px;
+margin-bottom: 60px;;
+}
+
+.glitch4:hover {
+font-size: 38px;
+color: #1C9D40;
+text-align: center;
+}
+
+@keyframes noise-anim {
+0% {
+  clip: rect(97px, 9999px, 76px, 0);
+}
+5% {
+  clip: rect(16px, 9999px, 98px, 0);
+}
+10% {
+  clip: rect(85px, 9999px, 87px, 0);
+}
+15% {
+  clip: rect(91px, 9999px, 48px, 0);
+}
+20% {
+  clip: rect(60px, 9999px, 50px, 0);
+}
+25% {
+  clip: rect(70px, 9999px, 47px, 0);
+}
+30% {
+  clip: rect(20px, 9999px, 11px, 0);
+}
+35% {
+  clip: rect(82px, 9999px, 15px, 0);
+}
+40% {
+  clip: rect(98px, 9999px, 66px, 0);
+}
+45% {
+  clip: rect(82px, 9999px, 14px, 0);
+}
+50% {
+  clip: rect(74px, 9999px, 37px, 0);
+}
+55% {
+  clip: rect(42px, 9999px, 79px, 0);
+}
+60% {
+  clip: rect(31px, 9999px, 84px, 0);
+}
+65% {
+  clip: rect(24px, 9999px, 77px, 0);
+}
+70% {
+  clip: rect(79px, 9999px, 48px, 0);
+}
+75% {
+  clip: rect(92px, 9999px, 7px, 0);
+}
+80% {
+  clip: rect(70px, 9999px, 96px, 0);
+}
+85% {
+  clip: rect(46px, 9999px, 26px, 0);
+}
+90% {
+  clip: rect(67px, 9999px, 17px, 0);
+}
+95% {
+  clip: rect(84px, 9999px, 10px, 0);
+}
+100% {
+  clip: rect(60px, 9999px, 54px, 0);
+}
+}
+.glitch2:hover:after {
+content: attr(data-text);
+position: absolute;
+margin-left: 20vw;
+left: 2px;
+text-shadow: -1px 0 red;
+top: 0;
+color: black;
+background: white;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim 3s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+0% {
+  clip: rect(31px, 9999px, 83px, 0);
+}
+5% {
+  clip: rect(35px, 9999px, 87px, 0);
+}
+10% {
+  clip: rect(80px, 9999px, 27px, 0);
+}
+15% {
+  clip: rect(61px, 9999px, 7px, 0);
+}
+20% {
+  clip: rect(73px, 9999px, 22px, 0);
+}
+25% {
+  clip: rect(3px, 9999px, 74px, 0);
+}
+30% {
+  clip: rect(26px, 9999px, 3px, 0);
+}
+35% {
+  clip: rect(54px, 9999px, 96px, 0);
+}
+40% {
+  clip: rect(95px, 9999px, 53px, 0);
+}
+45% {
+  clip: rect(12px, 9999px, 65px, 0);
+}
+50% {
+  clip: rect(99px, 9999px, 54px, 0);
+}
+55% {
+  clip: rect(31px, 9999px, 32px, 0);
+}
+60% {
+  clip: rect(17px, 9999px, 77px, 0);
+}
+65% {
+  clip: rect(65px, 9999px, 40px, 0);
+}
+70% {
+  clip: rect(86px, 9999px, 64px, 0);
+}
+75% {
+  clip: rect(53px, 9999px, 12px, 0);
+}
+80% {
+  clip: rect(85px, 9999px, 66px, 0);
+}
+85% {
+  clip: rect(76px, 9999px, 23px, 0);
+}
+90% {
+  clip: rect(22px, 9999px, 28px, 0);
+}
+95% {
+  clip: rect(86px, 9999px, 31px, 0);
+}
+100% {
+  clip: rect(34px, 9999px, 59px, 0);
+}
+}
+.glitch2:hover:before {
+content: attr(data-text);
+position: absolute;
+margin-left: 20vw;
+left: -2px;
+text-shadow: 1px 0 blue;
+top: 0;
+color: black;
+background: white;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim-2 4s infinite linear alternate-reverse;
+}
+
+.glitch3:hover:after {
+content: attr(data-text);
+position: absolute;
+margin-left: 35vw;
+left: 2px;
+text-shadow: -1px 0 red;
+top: 0;
+color: black;
+background: white;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch4:hover:after {
+content: attr(data-text);
+position: absolute;
+margin-left: 38vw;
+left: 2px;
+text-shadow: -1px 0 red;
+top: 0;
+color: white;
+background: #1C9D40;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim 3s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+0% {
+  clip: rect(31px, 9999px, 83px, 0);
+}
+5% {
+  clip: rect(35px, 9999px, 87px, 0);
+}
+10% {
+  clip: rect(80px, 9999px, 27px, 0);
+}
+15% {
+  clip: rect(61px, 9999px, 7px, 0);
+}
+20% {
+  clip: rect(73px, 9999px, 22px, 0);
+}
+25% {
+  clip: rect(3px, 9999px, 74px, 0);
+}
+30% {
+  clip: rect(26px, 9999px, 3px, 0);
+}
+35% {
+  clip: rect(54px, 9999px, 96px, 0);
+}
+40% {
+  clip: rect(95px, 9999px, 53px, 0);
+}
+45% {
+  clip: rect(12px, 9999px, 65px, 0);
+}
+50% {
+  clip: rect(99px, 9999px, 54px, 0);
+}
+55% {
+  clip: rect(31px, 9999px, 32px, 0);
+}
+60% {
+  clip: rect(17px, 9999px, 77px, 0);
+}
+65% {
+  clip: rect(65px, 9999px, 40px, 0);
+}
+70% {
+  clip: rect(86px, 9999px, 64px, 0);
+}
+75% {
+  clip: rect(53px, 9999px, 12px, 0);
+}
+80% {
+  clip: rect(85px, 9999px, 66px, 0);
+}
+85% {
+  clip: rect(76px, 9999px, 23px, 0);
+}
+90% {
+  clip: rect(22px, 9999px, 28px, 0);
+}
+95% {
+  clip: rect(86px, 9999px, 31px, 0);
+}
+100% {
+  clip: rect(34px, 9999px, 59px, 0);
+}
+}
+.glitch3:hover:before {
+content: attr(data-text);
+position: absolute;
+margin-left: 34vw;
+left: -2px;
+text-shadow: 1px 0 blue;
+top: 0;
+color: black;
+background: white;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim-2 4s infinite linear alternate-reverse;
+}
+
+.glitch4:hover:before {
+content: attr(data-text);
+position: absolute;
+margin-left: 38vw;
+left: -2px;
+text-shadow: 1px 0 blue;
+top: 0;
+color: white;
+background: #1C9D40;
+overflow: hidden;
+clip: rect(0, 900px, 0, 0);
+animation: noise-anim-2 4s infinite linear alternate-reverse;
+}
+
+/* The Modal (background) */
+.modal {
+    font-family: 'Josefin Sans',sans-serif;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    padding-right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #1C9D40;
+    color: white;
+    border-radius: 30px 30px 0 0px;
+}
+
+.modal-body {padding: 2px 16px;font-size: 21px;width: 55%; text-align: center;line-height: 130%;}
+
+.modal-footer {
+    padding: 14px 16px;
+    background-color: #1C9D40;
+    border-radius: 0 0 30px 30px;
+}
+
+.modal-title {letter-spacing: 1.5px; font-size: 36px;}
+
+.loading {
+list-style: none;
+margin: 0;
+padding: 0;
+position: absolute;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+.loading.reversed li3 {
+border: 3px solid white;
+-webkit-animation: LOADINGREV 2s infinite;
+        animation: LOADINGREV 2s infinite;
+}
+.loading.reversed li3:nth-child(1n) {
+-webkit-animation-delay: 0s;
+        animation-delay: 0s;
+}
+.loading.reversed li3:nth-child(2n) {
+-webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+}
+.loading.reversed li3:nth-child(3n) {
+-webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+}
+.loading li3 {
+height: 0;
+position: absolute;
+top: 50%;
+left: 0;
+width: 0;
+margin: 0;
+height: 10px;
+width: 10px;
+border: 3px solid #1C9D40;
+border-radius: 100%;
+-webkit-transform: transformZ(0);
+        transform: transformZ(0);
+-webkit-animation: LOADING 2s infinite;
+        animation: LOADING 2s infinite;
+}
+.loading li3:nth-child(1n) {
+left: -20px;
+-webkit-animation-delay: 0s;
+        animation-delay: 0s;
+}
+.loading li3:nth-child(2n) {
+left: 0;
+-webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+}
+.loading li3:nth-child(3n) {
+left: 20px;
+-webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+}
+
+.grid-row:after {
+content: '';
+display: table;
+clear: both;
+}
+.grid-row .col {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 50%;
+}
+.grid-row .col + .col {
+background: #1C9D40;
+left: auto;
+right: 0;
+}
+
+@-webkit-keyframes LOADING {
+0% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: #1C9D40;
+}
+50% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: white;
+}
+100% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: #1C9D40;
+}
+}
+
+@keyframes LOADING {
+0% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: #1C9D40;
+}
+50% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: white;
+}
+100% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: #1C9D40;
+}
+}
+@-webkit-keyframes LOADINGREV {
+0% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: white;
+}
+50% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: #1C9D40;
+}
+100% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: white;
+}
+}
+@keyframes LOADINGREV {
+0% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: white;
+}
+50% {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: #1C9D40;
+}
+100% {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: white;
+}
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="menu"><div><p class="menutitle"><img src="http://imgur.com/oyNqM0a.png" style="width:40px;height:40px;margin-bottom: -12px;margin-top: -18px;padding-right: 10px;">MEMORY BANK</p></div>
+  <div class="mainsection">
+    <ul3 class="section">
+    <li class="small"><a href="#Overview_Goes_Here" style="font-family: 'Josefin Sans', sans-serif;background: transparent;color: #1C9D40;text-decoration: none;cursor: pointer;outline: none;}
+">Overview</a></li>
+    <li class="small"><a href="#Feautures_Goes_Here" style="font-family: 'Josefin Sans', sans-serif;background: transparent;color: #1C9D40;text-decoration: none;cursor: pointer;outline: none;}
+">Feautures</a></li>
+    <li class="small"><a href="#Pricing_Goes_Here" style="font-family: 'Josefin Sans', sans-serif;background: transparent;color: #1C9D40;text-decoration: none;cursor: pointer;outline: none;}
+">Pricing</a></li></ul3>
+    <div class="button3" id="myBtn"><a class="link">Purchase Now</a></div>
+  </div></div>
+
+<center><img src="http://imgur.com/rjow77s.png" style="width:600px;height:600px;margin-top:20px;"></center>
+<center><div><p class="Gathering"><span style="font-size: 22px;">Remembering</span><br><span id="rotate">You</span></p></div><center>
+
+  <ul style="display:none">
+      <li>You</li>
+      <li>Anniversaries</li>
+      <li>Childrens Faces</li>
+      <li>Bank Information</li>
+  		<li>Birthdays</li>
+  		<li>Friends Names</li>
+      <li>To Eat</li>
+  		<li>Family Relations</li>
+      <li>Deathly Allergies</li>
+      <li>Blood Type</li>
+  		<li>Phone Numbers</li>
+      <li>SSN</li>
+      <li>Passwords</li>
+      <li>Your Name</li>
+      <li>Address</li>
+      <li>Directions</li>
+
+  	</ul>
+
+<section class="Green"><div class="row"><span class="minilocate"><h2 class="mini">Now introducing the</h2></span><h2 class="headline glitch4" data-text="MEMORY BOT.">Memory Bot.</h2></div>
+
+<div class="hideme"><img class="chip"src="http://imgur.com/1J0aezj.gif"></div>
+
+<div class="row2">
+  <p class="hideme">One surgery and Memory Bot is ready to connect to your brain and deposit all of
+     your memories to Memory Bank. By intercepting neurons in the brain it will remember everything about you so you don't have to.
+      And it is ready to become a part of you.</p>
+ </div></section>
+
+<section class="sectionme"><div class="row3"><h2 class="headline glitch3" data-text="How We INVADE."><a id="Overview_Goes_Here">How It Works.</a></h2></div>
+
+<div class="hideme"><img class="process"src="http://imgur.com/94ualNk.gif"></div>
+
+
+<div class="row2">
+  <p class="hideme">Once Memory Bot is implanted it will immediately begin swimming around every crevice of your brain to capture everything. All memories, public and private, are securely kept inside Memory Bank for safe-keeping. You won't feel a thing.</p>
+ </div></div></section>
+
+ <div class="row3"><h2 class="headline2 glitch2" data-text="Designed to CONTROL You in Multiple Situations."><a id="Feautures_Goes_Here">Designed to Help You in Multiple Situations.</a></h2></div>
+<div style="width: 100%;">
+ <div class="hideme"><img class="car"src="http://imgur.com/V5v25KH.png" onmouseover="this.src='http://imgur.com/Y8D3S96.png';" onmouseout="this.src='http://imgur.com/V5v25KH.png';" /></div>
+ <div class="hideme"><img class="eat"src="http://imgur.com/JI21FlH.png" onmouseover="this.src='http://imgur.com/zTOf5w9.png';" onmouseout="this.src='http://imgur.com/JI21FlH.png';" /></div>
+ <div class="hideme"><img class="baby"src="http://imgur.com/KPQ9X3S.png" onmouseover="hover(this);" onmouseout="unhover(this);" onmouseover="contentMouseoverFunction ()"/></div></div>
+
+ <div class="desc1"><p class="hideme" onmouseover="this.innerHTML='Memory Bot decides <br>where to go.';" onmouseout="this.innerHTML='Never forget <br>where to go.'">Never forget <br>where to go.</p></div>
+ <div class="desc2"><p class="hideme" onmouseover="this.innerHTML='Memory Bot decides <br>when to eat.';" onmouseout="this.innerHTML='Never forget <br>when to eat.'">Never forget <br>when to eat.</p></div>
+ <div class="desc3"><p class="hideme" onmouseover="this.innerHTML='Memory Bot decides <br>who your family is.';" onmouseout="this.innerHTML='Never forget <br>who your family is.'">Never forget <br>who your family is.</p></div>
+
+ <div class="row4">
+   <p class="hideme">
+     Live your life without the need to remember. Memory Bot will remember. Mememory Bot is your companion. Memory Bot is all you need.</p>
+  </div></div>
+
+  <div class="row3"><h2 class="glitch" data-text="JOIN US JOIN US JOIN US JOIN US JOIN US">Join Us.</h2></div>
+<div class="row2"><a id="Pricing_Goes_Here">Remember More with Memory Bank Membership</a></div>
+<ul2 class="options"><li class="prices"><header class="head">Standard</header><section class="info1"><div class="price1"><span>$12.99</span><br>
+  <span class="priceinfo1 clickbutton">/ user / month, for those who still need a little convincing</span></div><div class="deeperinfo1">
+    <p>1 TB of space for secure memory storage. Memory Bot will only capture and secure your basic memories.</p></div><div class="button1" id="myBtn1"><a class="link">Try free for 30 days</a></div><span>or <span style="color: #1C9D40">purchase now</span></span></section></li>
+
+<li class="prices2 clickbutton"><header class="head2">Advanced</header><section class="info1"><div class="price1"><span>$24.99</span><br>
+  <span class="priceinfo1">/ user / month, become comfortable with Memory Bot with even more possiblities.</span></div><div class="deeperinfo1">
+    <p>2 TB of space for even more secure memory storage with top-of-the-line precision and clarity. Memory Bot will now capture almost all memories.</p></div><div class="button2" id="myBtn2"><a class="link2">Try free for 30 days</a></div><span>or <span style="color: #1C9D40">purchase now</span></span></section></li>
+</li>
+
+<li class="prices2"><header class="head">Perfection</header><section class="info1"><div class="price1"><span>$40</span><br>
+  <span class="priceinfo1">/ user / month, become one with Memory Bot and experience true tranquility.</span></div><div class="deeperinfo1">
+    <p>Unlimited* memory space. Memory Bot will capture every waking moment. We will remember everything about you so you never have to.</p></div><div class="button1" id="myBtn3"><a class="link">Purchase Now</a></div></section></li>
+
+  </ul2>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2 class="Modal-Title"><div id="content" onmouseover="this.innerHTML='MEMORY BOT IS COMING, YOU ARE TOO LATE';" onmouseout="this.innerHTML='YOUR BRAIN IS IN OUR HANDS'">YOUR BRAIN IS IN OUR HANDS</div></h2>
+      </div>
+      <div class="modal-body">
+        <p>One of our surgeons has already been contacted and will be operating on you shortly.
+        Prepare accordingly. Soon all of your memories will live within Memory Bank. Thank you for your submission.</p>
+      </div>
+      <div class="modal-footer">
+
+          <div style="margin-bottom: 14px;">
+          <ul4 class="loading reversed">
+                  <li3></li3>
+                  <li3></li3>
+                  <li3></li3>
+                </ul4>
+          </div>
+      </div>
+    </div>
+
+    <script>
+
+    var terms = $("ul li");
+
+    	function rotateTerm() {
+
+    	  var ct = $("#rotate").data("term") || 0;
+
+    	  console.log(terms.eq([ct]).text());
+
+    	  $("#rotate").data("term",
+    	      ct == terms.length - 1 ? 0 : ct + 1).text(terms.eq([ct]).text())
+    	    .fadeIn().delay(2000).fadeOut(200, rotateTerm);
+
+    	}
+    	$(rotateTerm);
+      </script>
+
+<script>
+      $(document).ready(function() {
+
+          /* Every time the window is scrolled ... */
+          $(window).scroll( function(){
+
+              /* Check the location of each desired element */
+              $('.hideme').each( function(i){
+
+                  var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                  var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                  /* If the object is completely visible in the window, fade it it */
+                  if( bottom_of_window >= bottom_of_object ){
+
+                      $(this).animate({'opacity':'1'},1000);
+
+                  }
+
+              });
+
+          });
+
+      });
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn1 = document.getElementById("myBtn1");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn1.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn2 = document.getElementById("myBtn2");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn2.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn3 = document.getElementById("myBtn3");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn3.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+
+function hover(element) {
+    element.setAttribute('src', 'http://imgur.com/hwBNkLL.png');
+}
+function unhover(element) {
+    element.setAttribute('src', 'http://imgur.com/KPQ9X3S.png');
+}
+</script>
+
+
+</body>
+</html>
